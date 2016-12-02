@@ -10,8 +10,14 @@ import UIKit
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageView: UIImageView!
     
     
+    var imageUrl : String! {
+        didSet{
+            
+        }
+    }
     
     
     
