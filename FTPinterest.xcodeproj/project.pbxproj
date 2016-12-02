@@ -1,0 +1,456 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		208590286A9C29BC538657A3 /* Pods_FTPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A970C178EA0B82274697FA /* Pods_FTPinterest.framework */; };
+		2ACE31831DF1A99800789908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31821DF1A99800789908 /* AppDelegate.swift */; };
+		2ACE31881DF1A99800789908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE31861DF1A99800789908 /* Main.storyboard */; };
+		2ACE318A1DF1A99800789908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE31891DF1A99800789908 /* Assets.xcassets */; };
+		2ACE318D1DF1A99800789908 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE318B1DF1A99800789908 /* LaunchScreen.storyboard */; };
+		2ACE319D1DF1AA9D00789908 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE319C1DF1AA9D00789908 /* HomeCollectionViewCell.swift */; };
+		2ACE31A51DF1AB8C00789908 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31A41DF1AB8C00789908 /* SearchViewController.swift */; };
+		2ACE31A71DF1AC2400789908 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31A61DF1AC2400789908 /* NotificationViewController.swift */; };
+		2ACE31A91DF1AC3400789908 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31A81DF1AC3400789908 /* SavedViewController.swift */; };
+		2ACE31AB1DF1AE3300789908 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31AA1DF1AE3300789908 /* HomeCollectionViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2ACE317F1DF1A99800789908 /* FTPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2ACE31821DF1A99800789908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2ACE31871DF1A99800789908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2ACE31891DF1A99800789908 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2ACE318C1DF1A99800789908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2ACE318E1DF1A99800789908 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2ACE319C1DF1AA9D00789908 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		2ACE31A41DF1AB8C00789908 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2ACE31A61DF1AC2400789908 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		2ACE31A81DF1AC3400789908 /* SavedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
+		2ACE31AA1DF1AE3300789908 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		B095D8522975A0331A843B27 /* Pods-FTPinterest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPinterest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPinterest/Pods-FTPinterest.debug.xcconfig"; sourceTree = "<group>"; };
+		C4A970C178EA0B82274697FA /* Pods_FTPinterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPinterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D044B9AB9FE3E1613A7960C6 /* Pods-FTPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPinterest/Pods-FTPinterest.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2ACE317C1DF1A99800789908 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208590286A9C29BC538657A3 /* Pods_FTPinterest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C11356D4A9103FB472A5301 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4A970C178EA0B82274697FA /* Pods_FTPinterest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2ACE31761DF1A99800789908 = {
+			isa = PBXGroup;
+			children = (
+				2ACE31811DF1A99800789908 /* FTPinterest */,
+				2ACE31801DF1A99800789908 /* Products */,
+				FE9F4BF1B992FA6C1AB04A3E /* Pods */,
+				1C11356D4A9103FB472A5301 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2ACE31801DF1A99800789908 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE317F1DF1A99800789908 /* FTPinterest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2ACE31811DF1A99800789908 /* FTPinterest */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE31821DF1A99800789908 /* AppDelegate.swift */,
+				2ACE31971DF1AA7500789908 /* Model */,
+				2ACE31981DF1AA7500789908 /* View */,
+				2ACE31991DF1AA7500789908 /* ViewController */,
+				2ACE31861DF1A99800789908 /* Main.storyboard */,
+				2ACE31891DF1A99800789908 /* Assets.xcassets */,
+				2ACE318B1DF1A99800789908 /* LaunchScreen.storyboard */,
+				2ACE318E1DF1A99800789908 /* Info.plist */,
+			);
+			path = FTPinterest;
+			sourceTree = "<group>";
+		};
+		2ACE31971DF1AA7500789908 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2ACE31981DF1AA7500789908 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE319C1DF1AA9D00789908 /* HomeCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2ACE31991DF1AA7500789908 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE319E1DF1AB4D00789908 /* Home */,
+				2ACE31A31DF1AB7200789908 /* Search */,
+				2ACE31A11DF1AB7200789908 /* Notifications */,
+				2ACE31A21DF1AB7200789908 /* Saved */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2ACE319E1DF1AB4D00789908 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE31AA1DF1AE3300789908 /* HomeCollectionViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2ACE31A11DF1AB7200789908 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE31A61DF1AC2400789908 /* NotificationViewController.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		2ACE31A21DF1AB7200789908 /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE31A81DF1AC3400789908 /* SavedViewController.swift */,
+			);
+			path = Saved;
+			sourceTree = "<group>";
+		};
+		2ACE31A31DF1AB7200789908 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				2ACE31A41DF1AB8C00789908 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		FE9F4BF1B992FA6C1AB04A3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B095D8522975A0331A843B27 /* Pods-FTPinterest.debug.xcconfig */,
+				D044B9AB9FE3E1613A7960C6 /* Pods-FTPinterest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2ACE317E1DF1A99800789908 /* FTPinterest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2ACE31911DF1A99800789908 /* Build configuration list for PBXNativeTarget "FTPinterest" */;
+			buildPhases = (
+				2CEF38E9C53DEB3120898C0A /* [CP] Check Pods Manifest.lock */,
+				2ACE317B1DF1A99800789908 /* Sources */,
+				2ACE317C1DF1A99800789908 /* Frameworks */,
+				2ACE317D1DF1A99800789908 /* Resources */,
+				7A75F079FBD168CD69B3138F /* [CP] Embed Pods Frameworks */,
+				75EA50C79F880E52D4CE8CD4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTPinterest;
+			productName = FTPinterest;
+			productReference = 2ACE317F1DF1A99800789908 /* FTPinterest.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2ACE31771DF1A99800789908 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = LiuFengting;
+				TargetAttributes = {
+					2ACE317E1DF1A99800789908 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = E83AC9WR2F;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2ACE317A1DF1A99800789908 /* Build configuration list for PBXProject "FTPinterest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2ACE31761DF1A99800789908;
+			productRefGroup = 2ACE31801DF1A99800789908 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2ACE317E1DF1A99800789908 /* FTPinterest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2ACE317D1DF1A99800789908 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ACE318D1DF1A99800789908 /* LaunchScreen.storyboard in Resources */,
+				2ACE318A1DF1A99800789908 /* Assets.xcassets in Resources */,
+				2ACE31881DF1A99800789908 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CEF38E9C53DEB3120898C0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		75EA50C79F880E52D4CE8CD4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FTPinterest/Pods-FTPinterest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A75F079FBD168CD69B3138F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FTPinterest/Pods-FTPinterest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2ACE317B1DF1A99800789908 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2ACE31A91DF1AC3400789908 /* SavedViewController.swift in Sources */,
+				2ACE31A71DF1AC2400789908 /* NotificationViewController.swift in Sources */,
+				2ACE31831DF1A99800789908 /* AppDelegate.swift in Sources */,
+				2ACE31AB1DF1AE3300789908 /* HomeCollectionViewController.swift in Sources */,
+				2ACE319D1DF1AA9D00789908 /* HomeCollectionViewCell.swift in Sources */,
+				2ACE31A51DF1AB8C00789908 /* SearchViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2ACE31861DF1A99800789908 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ACE31871DF1A99800789908 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2ACE318B1DF1A99800789908 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2ACE318C1DF1A99800789908 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2ACE318F1DF1A99800789908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2ACE31901DF1A99800789908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2ACE31921DF1A99800789908 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B095D8522975A0331A843B27 /* Pods-FTPinterest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E83AC9WR2F;
+				INFOPLIST_FILE = FTPinterest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.FTPinterest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		2ACE31931DF1A99800789908 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D044B9AB9FE3E1613A7960C6 /* Pods-FTPinterest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = E83AC9WR2F;
+				INFOPLIST_FILE = FTPinterest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.FTPinterest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2ACE317A1DF1A99800789908 /* Build configuration list for PBXProject "FTPinterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ACE318F1DF1A99800789908 /* Debug */,
+				2ACE31901DF1A99800789908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2ACE31911DF1A99800789908 /* Build configuration list for PBXNativeTarget "FTPinterest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2ACE31921DF1A99800789908 /* Debug */,
+				2ACE31931DF1A99800789908 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2ACE31771DF1A99800789908 /* Project object */;
+}

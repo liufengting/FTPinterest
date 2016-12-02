@@ -1,0 +1,15 @@
+PODS:
+  - FTImageSize (0.0.1)
+  - FTZoomTransition (0.0.5)
+
+DEPENDENCIES:
+  - FTImageSize
+  - FTZoomTransition
+
+SPEC CHECKSUMS:
+  FTImageSize: 5f942f06a0b2019aa369d81ffa86ad85082dc170
+  FTZoomTransition: c47dcf93326c876d8032a4aabdc86f256ab0c09a
+
+PODFILE CHECKSUM: ef9e1a9e5e44635ad40e8e96a9be3c99b422d569
+
+COCOAPODS: 1.2.0.beta.1
