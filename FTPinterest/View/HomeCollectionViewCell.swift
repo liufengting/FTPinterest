@@ -7,20 +7,37 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageView: UIImageView!
     
     
-    var imageUrl : String! {
+    public var imageUrl : String = "" {
         didSet{
             
+            self.layer.cornerRadius = 5
+            self.imageView.layer.cornerRadius = 5
+            self.selectedBackgroundView = self.selectedBackgroundView_
+            
+            self.imageView.kf.setImage(with: URL(string: imageUrl)!)
+            self.imageView.translatesAutoresizingMaskIntoConstraints = false
         }
     }
     
+    var selectedBackgroundView_ : UIView {
+        let view = UIView(frame: self.bounds)
+        view.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
+        return view
+    }
     
-    
+//    override func draw(_ rect: CGRect) {
+//        super.draw(rect)
+//
+//        self.imageView.layer.cornerRadius = 5
+//
+//    }
     
     
     

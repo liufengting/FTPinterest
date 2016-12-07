@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		208590286A9C29BC538657A3 /* Pods_FTPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A970C178EA0B82274697FA /* Pods_FTPinterest.framework */; };
+		2A703DC41DF6D7460084C91C /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A703DC31DF6D7460084C91C /* DetialViewController.swift */; };
+		2A703DC61DF6DA860084C91C /* DetialHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A703DC51DF6DA860084C91C /* DetialHeaderView.swift */; };
 		2ACE31831DF1A99800789908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31821DF1A99800789908 /* AppDelegate.swift */; };
 		2ACE31881DF1A99800789908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE31861DF1A99800789908 /* Main.storyboard */; };
 		2ACE318A1DF1A99800789908 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE31891DF1A99800789908 /* Assets.xcassets */; };
@@ -16,10 +18,12 @@
 		2ACE31A51DF1AB8C00789908 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31A41DF1AB8C00789908 /* SearchViewController.swift */; };
 		2ACE31A71DF1AC2400789908 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31A61DF1AC2400789908 /* NotificationViewController.swift */; };
 		2ACE31A91DF1AC3400789908 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31A81DF1AC3400789908 /* SavedViewController.swift */; };
-		2ACE31AB1DF1AE3300789908 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31AA1DF1AE3300789908 /* HomeCollectionViewController.swift */; };
+		2ACE31AB1DF1AE3300789908 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31AA1DF1AE3300789908 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A703DC31DF6D7460084C91C /* DetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
+		2A703DC51DF6DA860084C91C /* DetialHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialHeaderView.swift; sourceTree = "<group>"; };
 		2ACE317F1DF1A99800789908 /* FTPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACE31821DF1A99800789908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ACE31871DF1A99800789908 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,7 +34,7 @@
 		2ACE31A41DF1AB8C00789908 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		2ACE31A61DF1AC2400789908 /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		2ACE31A81DF1AC3400789908 /* SavedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
-		2ACE31AA1DF1AE3300789908 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
+		2ACE31AA1DF1AE3300789908 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B095D8522975A0331A843B27 /* Pods-FTPinterest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPinterest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FTPinterest/Pods-FTPinterest.debug.xcconfig"; sourceTree = "<group>"; };
 		C4A970C178EA0B82274697FA /* Pods_FTPinterest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FTPinterest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D044B9AB9FE3E1613A7960C6 /* Pods-FTPinterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FTPinterest.release.xcconfig"; path = "Pods/Target Support Files/Pods-FTPinterest/Pods-FTPinterest.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACE319C1DF1AA9D00789908 /* HomeCollectionViewCell.swift */,
+				2A703DC51DF6DA860084C91C /* DetialHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -118,7 +123,8 @@
 		2ACE319E1DF1AB4D00789908 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2ACE31AA1DF1AE3300789908 /* HomeCollectionViewController.swift */,
+				2ACE31AA1DF1AE3300789908 /* HomeViewController.swift */,
+				2A703DC31DF6D7460084C91C /* DetialViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -240,7 +246,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		75EA50C79F880E52D4CE8CD4 /* [CP] Copy Pods Resources */ = {
@@ -280,10 +286,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A703DC61DF6DA860084C91C /* DetialHeaderView.swift in Sources */,
 				2ACE31A91DF1AC3400789908 /* SavedViewController.swift in Sources */,
 				2ACE31A71DF1AC2400789908 /* NotificationViewController.swift in Sources */,
+				2A703DC41DF6D7460084C91C /* DetialViewController.swift in Sources */,
 				2ACE31831DF1A99800789908 /* AppDelegate.swift in Sources */,
-				2ACE31AB1DF1AE3300789908 /* HomeCollectionViewController.swift in Sources */,
+				2ACE31AB1DF1AE3300789908 /* HomeViewController.swift in Sources */,
 				2ACE319D1DF1AA9D00789908 /* HomeCollectionViewCell.swift in Sources */,
 				2ACE31A51DF1AB8C00789908 /* SearchViewController.swift in Sources */,
 			);
@@ -329,6 +337,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -378,6 +387,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -409,6 +419,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E83AC9WR2F;
 				INFOPLIST_FILE = FTPinterest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.FTPinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,6 +434,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = E83AC9WR2F;
 				INFOPLIST_FILE = FTPinterest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.liufengting.FTPinterest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +461,7 @@
 				2ACE31931DF1A99800789908 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,10 +2,11 @@
 # platform :ios, '9.0'
 
 target 'FTPinterest' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+
+use_frameworks!
 pod 'FTZoomTransition'
-pod 'FTImageSize'
-  # Pods for FTPinterest
+pod 'FTImageSize', '~> 0.0.2'
+pod 'FTWaterFallLayout', '~> 0.0.1'
+pod 'Kingfisher'
 
 end
