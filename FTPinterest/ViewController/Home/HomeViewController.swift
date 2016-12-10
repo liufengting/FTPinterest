@@ -17,7 +17,9 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
 
     @IBOutlet weak var collectionView: UICollectionView!
     var imageArray : [String]!
-    let transitionDelegate = FTZoomTransition()
+
+    fileprivate let transitionDelegate = FTZoomTransition()
+    fileprivate let swipeInteractionController = FTInteractionTransition()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,12 +79,16 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         collectionView.deselectItem(at: indexPath, animated: true)
         
         // present
+
         
         let sender : HomeCollectionViewCell = collectionView.cellForItem(at: indexPath) as! HomeCollectionViewCell
         let sourceRect = sender.convert(sender.imageView.frame, to: UIApplication.shared.keyWindow)
 
-        
+
         let detialVC : DetialViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetialViewController") as! DetialViewController
+        
+        swipeInteractionController.wireToViewController(detialVC)
+
         detialVC.imageUrl = imageArray[indexPath.item]
         let element = FTZoomTransitionElement(sourceView: sender.imageView,
                                               sourceSnapView: sender.imageView.snapshotView(afterScreenUpdates: true)!,
@@ -91,9 +97,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                                               targetFrame: detialVC.imageRect)
         transitionDelegate.element = element
         detialVC.modalPresentationStyle = .custom
-        detialVC.transitioningDelegate = transitionDelegate
+        detialVC.transitioningDelegate = self
         self.present(detialVC, animated: true, completion: {})
+//        self.navigationController?.pushViewController(detialVC, animated: true)
         
     }
 
 }
+
+extension HomeViewController: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transitionDelegate.presentAnimator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transitionDelegate.dismissAnimator
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return swipeInteractionController.interactionInProgress ? swipeInteractionController : nil
+    }
+}
+

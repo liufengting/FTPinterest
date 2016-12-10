@@ -25,11 +25,7 @@ class DetialViewController: UIViewController {
     func setupHeaderView() {
         
         let imageSize : CGSize = FTImageSize.getImageSizeFromImageURL(imageUrl, perferdWidth: UIScreen.main.bounds.width - 30)
-        
-        
-        print(imageSize)
-        
-        
+
         headerView = DetialHeaderView(frame: CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: imageSize.height + 30))
         
         headerView.setup(imageUrl: imageUrl)
@@ -46,18 +42,19 @@ class DetialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let tap : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onTap(gesture:)))
-        self.view.addGestureRecognizer(tap)
+    }
+    @IBAction func backButtonTapped(_ sender: UIButton) {
         
-
+        self.dismiss(animated: true, completion: nil)
+        
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        headerView.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: imageRect.height + 30)
-        headerView.resize()
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        headerView.frame = CGRect(x: 0, y: 64, width: UIScreen.main.bounds.width, height: imageRect.height + 30)
+//        headerView.resize()
+//    }
 
     @objc func onTap(gesture : UITapGestureRecognizer){
         self.dismiss(animated: true, completion: nil)
