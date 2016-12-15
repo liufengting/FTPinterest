@@ -34,15 +34,12 @@ class DetialViewController: UIViewController {
         
         imageRect = headerView.convert(headerView.imageView.frame, to: UIApplication.shared.keyWindow)
     }
-    
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
     @IBAction func backButtonTapped(_ sender: UIButton) {
         
         self.dismiss(animated: true, completion: nil)

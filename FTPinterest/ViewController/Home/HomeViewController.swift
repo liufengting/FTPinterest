@@ -78,30 +78,41 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
+
+        
+        self.showDetialWithIndexPath(indexPath: indexPath)
+        
+    }
+    
+    func showDetialWithIndexPath(indexPath: IndexPath) {
+        
         // present
 
-        
         let sender : HomeCollectionViewCell = collectionView.cellForItem(at: indexPath) as! HomeCollectionViewCell
         let sourceRect = sender.imageView.convert(sender.imageView.bounds, to: UIApplication.shared.keyWindow)
-
-
+        
+        
         let detialVC : DetialViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetialViewController") as! DetialViewController
         
-        transitionDelegate.interActionAnimator.wireToViewController(detialVC)
-
+        transitionDelegate.interactiveAnimator.wireToViewController(detialVC)
+        
         detialVC.imageUrl = imageArray[indexPath.item]
+        
         let element = FTZoomTransitionElement(sourceView: sender.imageView,
                                               sourceSnapView: sender.imageView.snapshotView(afterScreenUpdates: true)!,
                                               sourceFrame: sourceRect,
                                               targetView: detialVC.headerView.imageView,
                                               targetFrame: detialVC.imageRect)
+        
+        element.enableZoom = true
+        
         transitionDelegate.element = element
-
+        
         detialVC.transitioningDelegate = transitionDelegate
         self.present(detialVC, animated: true, completion: {})
-
-        
     }
+    
+    
 
 }
 
