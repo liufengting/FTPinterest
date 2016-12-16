@@ -10,7 +10,7 @@ FTImageSize. Get image size from remote image url synchronously without download
 
 ### [FTWaterFallLayout](https://github.com/liufengting/FTWaterFallLayout)
 
-FTWaterFallLayout. Simple water fall layout for UIColllectionView.
+FTWaterFallLayout. Simple water fall layout for UICollectionView.
 
 ### [FTZoomTransition](https://github.com/liufengting/FTZoomTransition)  
 
