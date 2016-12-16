@@ -77,12 +77,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        
 
-        
         self.showDetialWithIndexPath(indexPath: indexPath)
-        
     }
+    
+    
+    // MARK: show detialVC
+
     
     func showDetialWithIndexPath(indexPath: IndexPath) {
         
