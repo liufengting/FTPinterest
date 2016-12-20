@@ -12,6 +12,7 @@ import FTWaterFallLayout
 import FTZoomTransition
 
 
+private let homeheaderReuseIdentifier = "homeheaderReuseIdentifier"
 private let homeCellReuseIdentifier = "HomeCollectionViewCellIdentifier"
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, FTWaterFallLayoutDelegate {
@@ -19,6 +20,15 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionView: UICollectionView!
     var imageArray : [String]!
 
+    var headerView : DetialHeaderView?
+    var imageRect : CGRect!
+    var imageUrl : String! {
+        didSet{
+            self.setupHeaderView()
+        }
+    }
+    
+    
     fileprivate let transitionDelegate = FTZoomTransition()
 
     override func viewDidLoad() {
@@ -28,6 +38,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         imageArray = getImages()
 
         self.collectionView.collectionViewLayout = collectionViewLayout
+        self.collectionView.register(DetialHeaderView.classForCoder(), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: homeheaderReuseIdentifier)
 
     }
 
@@ -55,14 +66,58 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         return array
     }
+    
+    
+
+    
+    func setupHeaderView() {
+        
+        let imageSize : CGSize = FTImageSize.getImageSizeFromImageURL(imageUrl, perferdWidth: UIScreen.main.bounds.width - 30)
+        
+        imageRect = self.view.convert(CGRect.init(x: 15, y: 20+15, width: UIScreen.main.bounds.width - 30, height: imageSize.height), to: UIApplication.shared.keyWindow)
+        
+        headerView = DetialHeaderView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: imageRect.height + 30))
+
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        headerView?.setup(imageUrl: imageUrl)
+
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        headerView?.hide()
+    }
+    
+    
     // MARK: FTWaterFallLayoutDelegate
+    func ftWaterFallLayout(layout: FTWaterFallLayout, heightForHeader atSection: NSInteger) -> CGFloat {
+        if (imageUrl != nil) {
+            return headerView!.frame.size.height
+        }
+        return 0
+    }
     
     func ftWaterFallLayout(layout: FTWaterFallLayout, heightForItem atIndex: IndexPath) -> CGFloat {
         // get image size without downloading it !!!!!! see more at :  https://github.com/liufengting/FTImageSize
+        
         return FTImageSize.getImageSizeFromImageURL(imageArray[atIndex.item], perferdWidth: (self.view.frame.size.width - 45)/2).height + 10
     }
     
     // MARK: UICollectionViewDataSource
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        if (imageUrl != nil) {
+                headerView = self.collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: homeheaderReuseIdentifier, for: IndexPath(item: 0, section: 0)) as? DetialHeaderView
+                return headerView!
+        }
+        return UICollectionReusableView()
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return imageArray.count
@@ -93,7 +148,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let sourceRect = sender.imageView.convert(sender.imageView.bounds, to: UIApplication.shared.keyWindow)
         
         
-        let detialVC : DetialViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetialViewController") as! DetialViewController
+        let detialVC : HomeViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
         
         transitionDelegate.interactiveAnimator.wireToViewController(detialVC)
         
@@ -102,7 +157,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let element = FTZoomTransitionElement(sourceView: sender.imageView,
                                               sourceSnapView: sender.imageView.snapshotView(afterScreenUpdates: true)!,
                                               sourceFrame: sourceRect,
-                                              targetView: detialVC.headerView.imageView,
+                                              targetView: detialVC.headerView?.imageView,
                                               targetFrame: detialVC.imageRect)
         
         element.enableZoom = true
