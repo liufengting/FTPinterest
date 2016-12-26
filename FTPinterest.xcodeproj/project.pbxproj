@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		208590286A9C29BC538657A3 /* Pods_FTPinterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A970C178EA0B82274697FA /* Pods_FTPinterest.framework */; };
+		2A6CEF921E10D635003F9F30 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6CEF911E10D635003F9F30 /* DetialViewController.swift */; };
+		2A6CEF941E10E1BC003F9F30 /* DetialHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6CEF931E10E1BC003F9F30 /* DetialHeaderView.xib */; };
 		2A703DC61DF6DA860084C91C /* DetialHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A703DC51DF6DA860084C91C /* DetialHeaderView.swift */; };
 		2ACE31831DF1A99800789908 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE31821DF1A99800789908 /* AppDelegate.swift */; };
 		2ACE31881DF1A99800789908 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ACE31861DF1A99800789908 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6CEF911E10D635003F9F30 /* DetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
+		2A6CEF931E10E1BC003F9F30 /* DetialHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetialHeaderView.xib; sourceTree = "<group>"; };
 		2A703DC51DF6DA860084C91C /* DetialHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialHeaderView.swift; sourceTree = "<group>"; };
 		2ACE317F1DF1A99800789908 /* FTPinterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTPinterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ACE31821DF1A99800789908 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 			children = (
 				2ACE319C1DF1AA9D00789908 /* HomeCollectionViewCell.swift */,
 				2A703DC51DF6DA860084C91C /* DetialHeaderView.swift */,
+				2A6CEF931E10E1BC003F9F30 /* DetialHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				2ACE31AA1DF1AE3300789908 /* HomeViewController.swift */,
+				2A6CEF911E10D635003F9F30 /* DetialViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6CEF941E10E1BC003F9F30 /* DetialHeaderView.xib in Resources */,
 				2ACE318D1DF1A99800789908 /* LaunchScreen.storyboard in Resources */,
 				2ACE318A1DF1A99800789908 /* Assets.xcassets in Resources */,
 				2ACE31881DF1A99800789908 /* Main.storyboard in Resources */,
@@ -290,6 +297,7 @@
 				2ACE31AB1DF1AE3300789908 /* HomeViewController.swift in Sources */,
 				2ACE319D1DF1AA9D00789908 /* HomeCollectionViewCell.swift in Sources */,
 				2ACE31A51DF1AB8C00789908 /* SearchViewController.swift in Sources */,
+				2A6CEF921E10D635003F9F30 /* DetialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

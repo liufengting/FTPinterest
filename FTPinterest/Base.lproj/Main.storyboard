@@ -168,11 +168,59 @@
                     <navigationItem key="navigationItem" title="Home" id="uWz-aB-6xq"/>
                     <connections>
                         <outlet property="collectionView" destination="yz5-1s-RJ5" id="CIM-5T-KYG"/>
+                        <segue destination="rPt-sY-uDF" kind="show" identifier="HomeToDetial" id="89I-IV-MMh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cfU-E4-rEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2679.1999999999998" y="-379.16041979010498"/>
+            <point key="canvasLocation" x="2433" y="-379"/>
+        </scene>
+        <!--Detial View Controller-->
+        <scene sceneID="7sB-yS-0A5">
+            <objects>
+                <viewController storyboardIdentifier="DetialViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rPt-sY-uDF" customClass="DetialViewController" customModule="FTPinterest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fmc-0e-1yk"/>
+                        <viewControllerLayoutGuide type="bottom" id="TiJ-AG-VNh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lxR-do-RyT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzP-oG-hAI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggr-Ck-iQi">
+                                        <rect key="frame" x="15" y="24" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="0dG-Fy-jKl"/>
+                                            <constraint firstAttribute="width" constant="36" id="2dO-aG-iVZ"/>
+                                        </constraints>
+                                        <state key="normal" title="❌"/>
+                                        <connections>
+                                            <action selector="dismissButtonTapped:" destination="rPt-sY-uDF" eventType="touchUpInside" id="2kQ-6b-euh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ggr-Ck-iQi" secondAttribute="bottom" constant="4" id="Dwt-IX-Siw"/>
+                                    <constraint firstAttribute="height" constant="64" id="Vnv-80-F4n"/>
+                                    <constraint firstItem="ggr-Ck-iQi" firstAttribute="leading" secondItem="bzP-oG-hAI" secondAttribute="leading" constant="15" id="sXa-k7-rGq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bzP-oG-hAI" firstAttribute="leading" secondItem="lxR-do-RyT" secondAttribute="leading" id="cPa-rR-ePn"/>
+                            <constraint firstItem="bzP-oG-hAI" firstAttribute="top" secondItem="lxR-do-RyT" secondAttribute="top" id="e0E-s5-dQa"/>
+                            <constraint firstAttribute="trailing" secondItem="bzP-oG-hAI" secondAttribute="trailing" id="fNo-OU-Y5u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U5C-rH-9gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3128.8000000000002" y="-379.16041979010498"/>
         </scene>
         <!--Notifications-->
         <scene sceneID="DW5-DQ-xIz">

@@ -1,6 +1,6 @@
 # FTPinterest
 
-FTPinterest is just a demo that imitates Pinterest. It has almost the same animations like Pinterest. I don't really have much time to finish this README. Feel welcome to clone this repo and see the code.
+FTPinterest is just a demo that mimics Pinterest. It has almost the same animations like Pinterest. I don't really have much time to finish this README. Feel welcome to clone this repo and see the code.
 
 ## This demo covers three frameworks that I wrote:
 

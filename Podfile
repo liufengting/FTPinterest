@@ -4,7 +4,7 @@
 target 'FTPinterest' do
 
 use_frameworks!
-pod 'FTZoomTransition', '~> 0.0.6'
+pod 'FTZoomTransition', '~> 0.0.8'
 pod 'FTImageSize', '~> 0.0.4'
 pod 'FTWaterFallLayout', '~> 0.0.2'
 pod 'Kingfisher'
