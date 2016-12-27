@@ -62,9 +62,12 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     // MARK: FTWaterFallLayoutDelegate
 
     func ftWaterFallLayout(layout: FTWaterFallLayout, heightForItem atIndex: IndexPath) -> CGFloat {
+        
         // get image size without downloading it !!!!!! see more at :  https://github.com/liufengting/FTImageSize
         
-        return FTImageSize.getImageSizeFromImageURL(imageArray[atIndex.item], perferdWidth: (self.view.frame.size.width - 45)/2).height + 10
+        let perferdWidth : CGFloat = (self.view.frame.size.width - 45)/2
+        let imageSize : CGSize = FTImageSize.getImageSizeFromImageURL(imageArray[atIndex.item], perferdWidth: perferdWidth)
+        return imageSize.height + 10
     }
     
     // MARK: UICollectionViewDataSource
@@ -95,13 +98,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // present
 
         let sender : HomeCollectionViewCell = collectionView.cellForItem(at: indexPath) as! HomeCollectionViewCell
-        let sourceRect = sender.imageView.convert(sender.imageView.bounds, to: UIApplication.shared.keyWindow)
+        let sourceRect = sender.convert(sender.imageView.frame, to: UIApplication.shared.keyWindow)
         
         
         let detialVC : DetialViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetialViewController") as! DetialViewController
         
         transitionDelegate.interactiveAnimator.wireToViewController(detialVC)
-        
+
         detialVC.imageUrl = imageArray[indexPath.item]
         
         let element = FTZoomTransitionElement(sourceView: sender.imageView,

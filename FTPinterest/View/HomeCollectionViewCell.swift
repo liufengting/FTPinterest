@@ -31,20 +31,5 @@ class HomeCollectionViewCell: UICollectionViewCell {
         view.backgroundColor = UIColor.init(white: 0.95, alpha: 1)
         return view
     }
-    
-//    override func draw(_ rect: CGRect) {
-//        super.draw(rect)
-//
-//        self.imageView.layer.cornerRadius = 5
-//
-//    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+   
 }

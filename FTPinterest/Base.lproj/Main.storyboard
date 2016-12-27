@@ -196,27 +196,88 @@
                                             <constraint firstAttribute="height" constant="36" id="0dG-Fy-jKl"/>
                                             <constraint firstAttribute="width" constant="36" id="2dO-aG-iVZ"/>
                                         </constraints>
-                                        <state key="normal" title="❌"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                        <state key="normal" title="✕">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="dismissButtonTapped:" destination="rPt-sY-uDF" eventType="touchUpInside" id="2kQ-6b-euh"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vs-q8-WfX">
+                                        <rect key="frame" x="280" y="26" width="80" height="32"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="D13-AP-E9x"/>
+                                            <constraint firstAttribute="height" constant="32" id="fIr-Pn-uZf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <state key="normal" title="Guardar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkButtonTapped:" destination="rPt-sY-uDF" eventType="touchUpInside" id="cyQ-Iw-eEW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BxP-sC-NIr">
+                                        <rect key="frame" x="61" y="24" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="Fsr-NC-3fN"/>
+                                            <constraint firstAttribute="width" constant="36" id="K1C-rq-RmE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="✪">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mO0-5C-X9q">
+                                        <rect key="frame" x="107" y="24" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="BKg-2A-0tp"/>
+                                            <constraint firstAttribute="width" constant="36" id="jfR-vq-dKc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <state key="normal" title="❁">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mO0-5C-X9q" secondAttribute="bottom" constant="4" id="B7g-2a-vCv"/>
                                     <constraint firstAttribute="bottom" secondItem="ggr-Ck-iQi" secondAttribute="bottom" constant="4" id="Dwt-IX-Siw"/>
+                                    <constraint firstItem="BxP-sC-NIr" firstAttribute="leading" secondItem="ggr-Ck-iQi" secondAttribute="trailing" constant="10" id="JzX-LF-cUY"/>
+                                    <constraint firstItem="mO0-5C-X9q" firstAttribute="leading" secondItem="BxP-sC-NIr" secondAttribute="trailing" constant="10" id="OAN-o0-iA3"/>
                                     <constraint firstAttribute="height" constant="64" id="Vnv-80-F4n"/>
+                                    <constraint firstAttribute="bottom" secondItem="BxP-sC-NIr" secondAttribute="bottom" constant="4" id="ZKR-z1-HNV"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Vs-q8-WfX" secondAttribute="trailing" constant="15" id="fCF-aY-bse"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Vs-q8-WfX" secondAttribute="bottom" constant="6" id="iVB-dm-gOM"/>
                                     <constraint firstItem="ggr-Ck-iQi" firstAttribute="leading" secondItem="bzP-oG-hAI" secondAttribute="leading" constant="15" id="sXa-k7-rGq"/>
                                 </constraints>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zMG-tk-GI0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="TiJ-AG-VNh" firstAttribute="top" secondItem="zMG-tk-GI0" secondAttribute="bottom" id="MeM-Xz-910"/>
+                            <constraint firstItem="zMG-tk-GI0" firstAttribute="leading" secondItem="lxR-do-RyT" secondAttribute="leading" id="V0c-o9-ggt"/>
                             <constraint firstItem="bzP-oG-hAI" firstAttribute="leading" secondItem="lxR-do-RyT" secondAttribute="leading" id="cPa-rR-ePn"/>
                             <constraint firstItem="bzP-oG-hAI" firstAttribute="top" secondItem="lxR-do-RyT" secondAttribute="top" id="e0E-s5-dQa"/>
                             <constraint firstAttribute="trailing" secondItem="bzP-oG-hAI" secondAttribute="trailing" id="fNo-OU-Y5u"/>
+                            <constraint firstItem="zMG-tk-GI0" firstAttribute="top" secondItem="bzP-oG-hAI" secondAttribute="bottom" id="h0x-fE-nu6"/>
+                            <constraint firstAttribute="trailing" secondItem="zMG-tk-GI0" secondAttribute="trailing" id="xCz-7K-p8P"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="zMG-tk-GI0" id="S8z-Qg-Jdv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5C-rH-9gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

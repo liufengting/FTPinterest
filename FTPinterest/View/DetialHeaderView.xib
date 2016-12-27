@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mrN-Nj-PhO">
-                    <rect key="frame" x="15" y="15" width="376" height="200"/>
+                    <rect key="frame" x="15" y="5" width="376" height="200"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="200" id="Z20-tE-ivM"/>
                     </constraints>
@@ -27,22 +27,23 @@
                     </userDefinedRuntimeAttributes>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Something about this post." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RxM-jb-qXf">
-                    <rect key="frame" x="15" y="230" width="130.5" height="12"/>
+                    <rect key="frame" x="15" y="220" width="130.5" height="12"/>
                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="website.net" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLz-kG-0jo">
-                    <rect key="frame" x="15" y="242" width="67.5" height="14.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="website.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLz-kG-0jo">
+                    <rect key="frame" x="15" y="232" width="73.5" height="14.5"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggX-V5-LUB">
-                    <rect key="frame" x="331" y="230" width="60" height="30"/>
+                    <rect key="frame" x="319" y="220" width="72" height="32"/>
                     <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="60" id="uF4-gc-i1x"/>
+                        <constraint firstAttribute="height" constant="32" id="RuH-fT-9M6"/>
+                        <constraint firstAttribute="width" constant="72" id="uF4-gc-i1x"/>
                     </constraints>
                     <state key="normal" title="Visitar">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -64,7 +65,7 @@
                 <constraint firstItem="mrN-Nj-PhO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="iJy-Cy-a8n"/>
                 <constraint firstItem="nLz-kG-0jo" firstAttribute="top" secondItem="RxM-jb-qXf" secondAttribute="bottom" id="n84-jq-fzV"/>
                 <constraint firstAttribute="trailing" secondItem="mrN-Nj-PhO" secondAttribute="trailing" constant="15" id="ujH-y9-WA5"/>
-                <constraint firstItem="mrN-Nj-PhO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="vfh-eX-pvD"/>
+                <constraint firstItem="mrN-Nj-PhO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="vfh-eX-pvD"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
