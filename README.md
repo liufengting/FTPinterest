@@ -16,3 +16,7 @@ FTWaterFallLayout. Simple water fall layout for UICollectionView.
 
 FTZoomTransition.
 
+# ScreenShot
+
+![screenshots](https://raw.githubusercontent.com/liufengting/FTResourceRepo/master/Resource/FTPinterest/FTPinterest.gif)
+
