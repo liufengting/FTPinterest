@@ -1,21 +1,28 @@
 PODS:
   - FTImageSize (0.0.4)
   - FTWaterFallLayout (0.0.2)
-  - FTZoomTransition (0.0.8)
-  - Kingfisher (3.2.2)
+  - FTZoomTransition (0.2.1)
+  - Kingfisher (4.8.1)
 
 DEPENDENCIES:
   - FTImageSize (~> 0.0.4)
   - FTWaterFallLayout (~> 0.0.2)
-  - FTZoomTransition (~> 0.0.8)
+  - FTZoomTransition (~> 0.2.1)
   - Kingfisher
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FTImageSize
+    - FTWaterFallLayout
+    - FTZoomTransition
+    - Kingfisher
 
 SPEC CHECKSUMS:
   FTImageSize: 29c6fc0830dbe33973286148a8e32cd582a9f26d
   FTWaterFallLayout: 5f4559dea11117ff9211a2585bf76c61cc7cf49e
-  FTZoomTransition: 7513a2d2c29983a2b78707110ba2013b0e0689ff
-  Kingfisher: 821466474ad7ffc375a4aecadfa05068cfed67b3
+  FTZoomTransition: 670493781f6aad231f59fee17ba1b339e229d6a5
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
 
-PODFILE CHECKSUM: d4bf5955b5bcd592f774782fc0c2c99be7e9223a
+PODFILE CHECKSUM: 8c3acfe94802e4b0f474c1e056f0c5144b3e55c2
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.5.3

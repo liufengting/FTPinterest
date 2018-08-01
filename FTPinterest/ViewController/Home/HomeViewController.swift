@@ -98,24 +98,24 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         // present
 
         let sender : HomeCollectionViewCell = collectionView.cellForItem(at: indexPath) as! HomeCollectionViewCell
-        let sourceRect = sender.convert(sender.imageView.frame, to: UIApplication.shared.keyWindow)
-        
         
         let detialVC : DetialViewController = self.storyboard?.instantiateViewController(withIdentifier: "DetialViewController") as! DetialViewController
         
-        transitionDelegate.interactiveAnimator.wireToViewController(detialVC)
+        transitionDelegate.wirePanDismissToViewController(detialVC, for: detialVC.headerView)
 
         detialVC.imageUrl = imageArray[indexPath.item]
         
-        let element = FTZoomTransitionElement(sourceView: sender.imageView,
-                                              sourceSnapView: sender.imageView.snapshotView(afterScreenUpdates: true)!,
-                                              sourceFrame: sourceRect,
-                                              targetView: (detialVC.headerView.imageView)!,
-                                              targetFrame: detialVC.imageRect)
+//        let element = FTZoomTransitionElement(sourceView: sender.imageView,
+//                                              sourceSnapView: sender.imageView.snapshotView(afterScreenUpdates: true)!,
+//                                              sourceFrame: sourceRect,
+//                                              targetView: (detialVC.headerView.imageView)!,
+//                                              targetFrame: detialVC.imageRect)
+
+        let config = FTZoomTransitionConfig(sourceView: sender.imageView, image: sender.imageView.image, targetFrame: detialVC.imageRect)
+
+        config.enableZoom = true
         
-        element.enableZoom = true
-        
-        transitionDelegate.element = element
+        transitionDelegate.config = config
         
         detialVC.transitioningDelegate = transitionDelegate
         self.present(detialVC, animated: true, completion: {})
