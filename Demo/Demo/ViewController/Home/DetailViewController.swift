@@ -9,40 +9,20 @@
 import UIKit
 import FTImageSize
 
-
-
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageViewHeightConstraint: NSLayoutConstraint!
     
-    var imageRect : CGRect = .zero
-    
-//    {
-//        let imageSize : CGSize = FTImageSize.shared.convertSize(size: imageModel.imageSize, perferdWidth: UIScreen.main.bounds.width - 30)
-//        return CGRect(x: 15, y: DetailViewController.navigationBarHeight + 10, width: imageSize.width, height: imageSize.height)
-//    }
-    var imageModel : ImageModel! {
+    var imageRect: CGRect = .zero
+    var imageModel: ImageModel! {
         didSet {
-            let imageSize : CGSize = FTImageSize.shared.convertSize(size: imageModel.imageSize, perferdWidth: UIScreen.main.bounds.width - 30)
-            self.imageRect = CGRect(x: 15, y: DetailViewController.navigationBarHeight + 10, width: imageSize.width, height: imageSize.height)
+            let imageSize: CGSize = FTImageSize.shared.convertSize(size: imageModel.imageSize, perferdWidth: UIScreen.main.bounds.width)
+            self.imageRect = CGRect(x: 0, y: DetailViewController.navigationBarHeight, width: imageSize.width, height: imageSize.height)
         }
     }
-    
-    static var statusBarHeight: CGFloat {
-       if #available(iOS 13.0, *) {
-           let statusManager = UIApplication.shared.delegate?.window??.windowScene?.statusBarManager
-           return statusManager?.statusBarFrame.height ?? 20.0
-       } else {
-           return UIApplication.shared.statusBarFrame.height
-       }
-    }
 
-    static var navigationBarHeight: CGFloat {
-        return 44.0 + statusBarHeight
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Detail"
@@ -57,6 +37,23 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true) {
             
         }
+    }
+    
+}
+
+extension UIViewController {
+    
+    static var statusBarHeight: CGFloat {
+       if #available(iOS 13.0, *) {
+           let statusManager = UIApplication.shared.delegate?.window??.windowScene?.statusBarManager
+           return statusManager?.statusBarFrame.height ?? 20.0
+       } else {
+           return UIApplication.shared.statusBarFrame.height
+       }
+    }
+
+    static var navigationBarHeight: CGFloat {
+        return 44.0 + statusBarHeight
     }
     
 }

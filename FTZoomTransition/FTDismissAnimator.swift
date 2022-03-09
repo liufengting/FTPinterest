@@ -8,19 +8,21 @@
 
 import UIKit
 
-open class FTDismissAnimator: NSObject, UIViewControllerAnimatedTransitioning{
+public class FTDismissAnimator: NSObject, UIViewControllerAnimatedTransitioning{
     
-    open var config : FTZoomTransitionConfig!
+    public var config: FTZoomTransitionConfig?
     
     public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval{
+        guard let config = config else {
+            return 0
+        }
         return max(FTZoomTransitionConfig.maxAnimationDuriation(), config.dismissAnimationDuriation)
     }
     
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        if config == nil {
+        guard let config = config else {
             return
         }
-        
         let fromVC = transitionContext.viewController(forKey: .from)!
         let toVC = transitionContext.viewController(forKey: .to)!
         let container = transitionContext.containerView
@@ -31,15 +33,15 @@ open class FTDismissAnimator: NSObject, UIViewControllerAnimatedTransitioning{
         toVC.view.alpha = 0.0
         
         container.addSubview(toVC.view)
-        container.addSubview(self.config.transitionImageView)
+        container.addSubview(config.transitionImageView)
         
-        self.config.transitionImageView.frame = config.targetFrame
-        self.config.transitionImageView.alpha = 1.0
-        self.config.transitionImageView.isHidden = false
+        config.transitionImageView.frame = config.targetFrame
+        config.transitionImageView.alpha = 1.0
+        config.transitionImageView.isHidden = false
         
-        let zoomScale : CGFloat = self.config.targetFrame.size.width/self.config.sourceFrame.size.width
+        let zoomScale: CGFloat = config.targetFrame.size.width/config.sourceFrame.size.width
         
-        if self.config.enableZoom == true {
+        if config.enableZoom == true {
             toVC.view.layer.transform = CATransform3DMakeScale(zoomScale, zoomScale, 1.0)
         }
 
@@ -51,31 +53,29 @@ open class FTDismissAnimator: NSObject, UIViewControllerAnimatedTransitioning{
                                     UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration:  1.0, animations: {
                                         toVC.view.alpha = 1
                                         if (!transitionContext.isInteractive) {
-                                            print(self.config.sourceFrame)
-
-                                            self.config.transitionImageView.frame = self.config.sourceFrame
+                                            config.transitionImageView.frame = config.sourceFrame
                                         }
                                     })
-                                    if self.config.enableZoom == true {
+                                    if config.enableZoom == true {
                                         UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration:  1.0, animations: {
                                             toVC.view.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
                                         })
                                     }
-                                    
                                     UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.01, animations: {
                                         fromVC.view.alpha = 0
                                     })
                                     
         }, completion: { (completed) -> () in
             if (transitionContext.transitionWasCancelled == true){
-                if self.config.enableZoom == true {
+                if config.enableZoom == true {
                     toVC.view.layer.transform = CATransform3DMakeScale(1.0, 1.0, 1.0)
                 }
                 container.bringSubviewToFront(fromVC.view)
             }
-            self.config.transitionImageView.isHidden = transitionContext.transitionWasCancelled
-            self.config.sourceView?.isHidden = transitionContext.transitionWasCancelled
+            config.transitionImageView.isHidden = transitionContext.transitionWasCancelled
+            config.sourceView?.isHidden = transitionContext.transitionWasCancelled
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
     }
+    
 }

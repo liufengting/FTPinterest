@@ -29,7 +29,7 @@ public extension FTImageSize {
     ///   - maxHeight: max height
     /// - Returns: image size
     func convertSize(size: CGSize, perferdWidth: CGFloat, maxHeight: CGFloat = CGFloat(MAXFLOAT)) -> CGSize {
-        var convertedSize : CGSize = CGSize.zero
+        var convertedSize: CGSize = CGSize.zero
         if size.width == 0 || size.height == 0 {
             return CGSize(width: perferdWidth, height: perferdWidth)
         }
@@ -37,6 +37,7 @@ public extension FTImageSize {
         convertedSize.height = min((size.height * perferdWidth) / size.width, maxHeight)
         return convertedSize
     }
+    
 }
 
 public class FTImageSize: NSObject {
@@ -52,7 +53,6 @@ public class FTImageSize: NSObject {
     public func getImageSize(_ urlString: String) -> CGSize {
         self.getImageSize(URL(string: urlString))
     }
-
     
     public func getImageSize(_ url: URL?)  -> CGSize {
         guard let url = url else {
@@ -72,7 +72,6 @@ public class FTImageSize: NSObject {
         }
         return size
     }
-    
     
     private func sendSynchronousRequest(_ urlRequest: URLRequest) -> Data? {
         var data: Data?
@@ -240,4 +239,5 @@ public class FTImageSize: NSObject {
             }
         }
     }
+    
 }

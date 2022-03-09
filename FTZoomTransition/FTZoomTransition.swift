@@ -8,15 +8,15 @@
 
 import UIKit
 
-open class FTZoomTransitionConfig {
+public class FTZoomTransitionConfig {
     
-    open weak var sourceView: UIView?
-    open var sourceFrame = CGRect.zero
-    open var targetFrame = CGRect.zero
-    open var enableZoom : Bool = false
-    open var presentAnimationDuriation : TimeInterval = 0.3
-    open var dismissAnimationDuriation : TimeInterval = 0.3
-    open lazy var transitionImageView: UIImageView = {
+    public weak var sourceView: UIView?
+    public var sourceFrame = CGRect.zero
+    public var targetFrame = CGRect.zero
+    public var enableZoom: Bool = false
+    public var presentAnimationDuriation: TimeInterval = 0.3
+    public var dismissAnimationDuriation: TimeInterval = 0.3
+    public lazy var transitionImageView: UIImageView = {
         let iv = UIImageView()
         iv.clipsToBounds = true
         iv.contentMode = .scaleAspectFill
@@ -36,11 +36,12 @@ open class FTZoomTransitionConfig {
             self.sourceFrame = (self.sourceView?.superview?.convert((self.sourceView?.frame)!, to: UIApplication.shared.delegate?.window!)) ?? .zero;
         }
     }
+    
 }
 
-open class FTZoomTransition: NSObject, UIViewControllerTransitioningDelegate {
+public class FTZoomTransition: NSObject, UIViewControllerTransitioningDelegate {
     
-    open var config : FTZoomTransitionConfig! {
+    public var config: FTZoomTransitionConfig! {
         willSet{
             presentAnimator.config = newValue
             dismissAnimator.config = newValue
@@ -75,6 +76,7 @@ open class FTZoomTransition: NSObject, UIViewControllerTransitioningDelegate {
             return nil
         }
     }
+    
 }
 
 public extension UIView {
@@ -98,4 +100,5 @@ public extension UIView {
         self.layer.position = position
         self.layer.anchorPoint = anchorPoint
     }
+    
 }

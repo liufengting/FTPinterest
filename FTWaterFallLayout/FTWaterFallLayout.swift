@@ -11,8 +11,8 @@ import UIKit
 @objc public protocol FTWaterFallLayoutDelegate {
     
     func ftWaterFallLayout(layout: FTWaterFallLayout, heightForItem atIndex: IndexPath) -> CGFloat
-
     @objc optional func ftWaterFallLayout(layout: FTWaterFallLayout, heightForHeader atSection: NSInteger) -> CGFloat
+
 }
 
 public class FTWaterFallLayout: UICollectionViewFlowLayout {
@@ -20,11 +20,10 @@ public class FTWaterFallLayout: UICollectionViewFlowLayout {
     public var numberOfColumns: NSInteger = 2
     public var sectionInsets: UIEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     public var itemMaginSize: CGSize = CGSize(width: 10, height: 10)
-    public var delegate : FTWaterFallLayoutDelegate?
-    
+    public var delegate: FTWaterFallLayoutDelegate?
     fileprivate var itemWidth: CGFloat = 0
     fileprivate var layoutAttributes: [UICollectionViewLayoutAttributes] = []
-    fileprivate var heightsForEachColumn: [NSInteger : CGFloat] = [:]
+    fileprivate var heightsForEachColumn: [NSInteger: CGFloat] = [:]
     
     // MARK: - private methods
     fileprivate func configure() {
@@ -42,7 +41,7 @@ public class FTWaterFallLayout: UICollectionViewFlowLayout {
             debugPrint("Please set FTWaterFallLayout.delegate")
             return 0
         }
-        if let headerHeight : CGFloat = delegate?.ftWaterFallLayout?(layout: self, heightForHeader: section) {
+        if let headerHeight: CGFloat = delegate?.ftWaterFallLayout?(layout: self, heightForHeader: section) {
             return headerHeight
         }
         return 0
@@ -58,9 +57,9 @@ public class FTWaterFallLayout: UICollectionViewFlowLayout {
     
     fileprivate func getMinHeightColumn() -> NSInteger {
         var minIndex = 0
-        var minHeight : CGFloat = heightsForEachColumn[0]!
+        var minHeight: CGFloat = heightsForEachColumn[0]!
         for i in 0 ..< heightsForEachColumn.count{
-            let height : CGFloat = heightsForEachColumn[i]!
+            let height: CGFloat = heightsForEachColumn[i]!
             if height < minHeight {
                 minHeight = height
                 minIndex = i
@@ -70,9 +69,9 @@ public class FTWaterFallLayout: UICollectionViewFlowLayout {
     }
     
     fileprivate func getMaxHeight() -> CGFloat {
-        var maxHeight : CGFloat = heightsForEachColumn[0]!
+        var maxHeight: CGFloat = heightsForEachColumn[0]!
         for i in 0 ..< heightsForEachColumn.count{
-            let height : CGFloat = heightsForEachColumn[i]!
+            let height: CGFloat = heightsForEachColumn[i]!
             if height > maxHeight {
                 maxHeight = height
             }
@@ -111,4 +110,5 @@ public class FTWaterFallLayout: UICollectionViewFlowLayout {
     public override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
         return layoutAttributes[indexPath.item]
     }
+    
 }
